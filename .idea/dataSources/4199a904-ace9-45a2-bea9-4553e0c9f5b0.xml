@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Sqlite (Xerial) - ClientInfo.db">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+    <schema id="1">
+      <visible>1</visible>
+    </schema>
+    <table id="2" parent="1" name="android_metadata"/>
+    <table id="3" parent="1" name="Clients"/>
+    <table id="4" parent="1" name="sqlite_sequence"/>
+    <column id="5" parent="2" name="locale">
+      <data-type>TEXT(0,-1)|12</data-type>
+      <default-expression>&apos;en_US&apos;</default-expression>
+    </column>
+    <column id="6" parent="3" name="_id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="7" parent="3" name="First_Name">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="8" parent="3" name="Middle_Name">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="9" parent="3" name="Last_Name">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="10" parent="3" name="Phone_Number">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="11" parent="3">
+      <columns>_id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="12" parent="4" name="name">
+      <data-type>(0,-1)|12</data-type>
+    </column>
+    <column id="13" parent="4" name="seq">
+      <data-type>(0,-1)|12</data-type>
+    </column>
+  </database-model>
+</dataSource>

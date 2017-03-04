@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical" android:weightSum="1">
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/find_user_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/edit_phone_Number"
+            android:id="@+id/textView" android:gravity="center"/>
+    <EditText
+            android:layout_width="530dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/editPhoneNumber" android:layout_gravity="center_horizontal" android:phoneNumber="true"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_get_customer_info"
+            android:id="@+id/btnGetUserInfo"
+            android:layout_gravity="right"
+            android:onClick="getCustomerInfo" android:paddingRight="20dp" android:paddingLeft="20dp"/>
+</LinearLayout>

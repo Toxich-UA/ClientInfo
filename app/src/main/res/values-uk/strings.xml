@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ClientInfo</string>
+    <string name="btn_get_customer_info">Отримати інформацію</string>
+    <string name="edit_phone_Number">Введіть номер телефону</string>
+    <string name="tab_2">Накладні</string>
+    <string name="customer_info">Інформація</string>
+    <string name="customer_info_first_name">Ім\'я</string>
+    <string name="customer_info_last_name">Прізвище</string>
+    <string name="customer_info_middle_name">Побатькові</string>
+    <string name="customer_info_phone_number">Номер телефону</string>
+    <string name="incorrect_phone_number">Не вірний номер телефону</string>
+    <string name="waybill_table_comment">Коментарій</string>
+    <string name="waybill_table_date">Дата</string>
+    <string name="waybill_table_sum">Сума</string>
+    <string name="btn_find_customer_info">Знайти інформацію</string>
+    <string name="btn_get_all_customer">Усі кліенти</string>
+    <string name="find_customer">Знайти покупця</string>
+    <string name="customer_list">Список покупців</string>
+    <string name="add_customer">Додати покупців</string>
+    <string name="exit">Вийти</string>
+    <string name="create_new_customer">Додати нового покупця</string>
+    <string name="btn_update">Оновити</string>
+    <string name="fill_all_fields">Заповніть усі поля</string>
+    <string name="successfully_added">Успішно додано</string>
+    <string name="waybill_table_total_sum">Загальна сума</string>
+    <string name="edit_customer">Редагувати покупця</string>
+    <string name="customer_info_edit">Інформацю оновлено</string>
+    <string name="waybill_number_error">Номер накладної вже існує</string>
+    <string name="edit_waybill">Редагувати накладну</string>
+    <string name="enter_waybill_number">Введіть номер накладної</string>
+    <string name="delete">Видалити</string>
+    <string name="confirm_delete">Ви впевнені?</string>
+    <string name="confirm_delete_msg">Ви впевнені що хочете видалити?</string>
+    <string name="cancel">Відмонити</string>
+    <string name="yes">Так</string>
+    <string name="successfully_deleted">Успішно видалено</string>
+    <string name="add_waybill">Додати накладну</string>
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/customer_list_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="horizontal|vertical"
+            android:layout_marginTop="65dp"
+            android:scrollbarStyle="outsideInset"
+            android:fillViewport="true">
+
+
+
+        <HorizontalScrollView
+                android:id="@+id/horizontalView"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal|vertical"
+                android:layout_width="wrap_content"
+                android:fillViewport="true"
+                android:layout_marginTop="5dip">
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                          android:id="@+id/customer_list"
+                          android:orientation="vertical"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <TextView
+                            android:text="@string/customer_info_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dip"
+                            android:layout_weight="0"
+
+                            android:id="@+id/id"/>
+                    <TextView
+                            android:text="@string/customer_info_last_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dip"
+                            android:layout_weight="1"
+                            android:id="@+id/LastName" android:gravity="right"/>
+                    <TextView
+                            android:text="@string/customer_info_first_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dip"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:id="@+id/FirstName"/>
+                    <TextView
+                            android:text="@string/customer_info_middle_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dip"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:id="@+id/MiddleName"/>
+                    <TextView
+                            android:text="@string/customer_info_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="3dip"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:id="@+id/PhoneNumber"/>
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</RelativeLayout>

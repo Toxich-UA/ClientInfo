@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">ClientInfo</string>
+    <string name="btn_get_customer_info">Get customer info</string>
+    <string name="edit_phone_Number">Enter phone number</string>
+
+    <string name="btn_get_all_customer">Get all customer</string>
+    <string name="btn_find_customer_info">Find customer info</string>
+    <string name="btn_update">Update</string>
+
+
+
+    <string name="tab_2">Waybill</string>
+    <string name="tab_3" translatable="false">WIP</string>
+
+    <string name="customer_info_id" translatable="false">ID</string>
+    <string name="customer_info_first_name">First name</string>
+    <string name="customer_info_middle_name">Middle name</string>
+    <string name="customer_info_last_name">Last name</string>
+    <string name="customer_info_phone_number">Phone number</string>
+    <string name="edit_customer">Edit</string>
+    <string name="edit_waybill">Edit waybill</string>
+    <string name="delete">Delete</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm_delete">Are you sure</string>
+    <string name="confirm_delete_msg">Are you sure you want to delete?</string>
+
+    <string name="enter_waybill_number">Enter waybill number</string>
+    <string name="customer_info_edit">Customer info edit</string>
+    <string name="waybill_number_error">Waybill number already exist</string>
+
+    <!--Table strings-->
+    <string name="waybill_table_date">Date</string>
+    <string name="waybill_table_comment">Comment</string>
+    <string name="waybill_table_sum">Sum</string>
+    <string name="waybill_table_total_sum">Total sum</string>
+
+
+
+    <!--Manifest file-->
+    <string name="customer_info">Customer info</string>
+    <string name="find_customer">Find customer</string>
+    <string name="add_customer">Add customer</string>
+    <string name="add_waybill">Add waybill</string>
+    <string name="customer_list">Customer list</string>
+    <string name="create_new_customer">Add new customer</string>
+
+    <!--Toast-->
+    <string name="incorrect_phone_number">Incorrect phone number</string>
+    <string name="fill_all_fields">Fill all fields</string>
+    <string name="successfully_added">Successfully added</string>
+    <string name="successfully_deleted">Successfully deleted</string>
+
+    <!--Menu-->
+    <string name="exit">Exit</string>
+
+
+
+</resources>

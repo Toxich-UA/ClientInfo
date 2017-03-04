@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ClientInfo</string>
+    <string name="btn_get_customer_info">Получить информацию</string>
+    <string name="edit_phone_Number">Введите номер телефона</string>
+    <string name="tab_2">Накладные</string>
+    <string name="customer_info">Информация</string>
+    <string name="customer_info_first_name">Имя</string>
+    <string name="customer_info_last_name">Фамилия</string>
+    <string name="customer_info_middle_name">Отчество</string>
+    <string name="customer_info_phone_number">Номер телефона</string>
+    <string name="incorrect_phone_number">Не верный номер телефона</string>
+    <string name="waybill_table_comment">Коментарий</string>
+    <string name="waybill_table_date">Дата</string>
+    <string name="waybill_table_sum">Сумма</string>
+    <string name="btn_find_customer_info">Найти информацию</string>
+    <string name="btn_get_all_customer">Все клиенты</string>
+    <string name="find_customer">Найти покупателя</string>
+    <string name="exit">Выйти</string>
+    <string name="add_customer">Добавить покупателей</string>
+    <string name="customer_list">Список покупателей</string>
+    <string name="create_new_customer">Добавить нового покупателя</string>
+    <string name="btn_update">Обновить</string>
+    <string name="fill_all_fields">Заполните все поля</string>
+    <string name="successfully_added">Успешно добавленно</string>
+    <string name="waybill_table_total_sum">Общая сумма</string>
+    <string name="edit_customer">Изменить покупателя</string>
+    <string name="customer_info_edit">Информация обновленя</string>
+    <string name="waybill_number_error">Номер накладной уже существует</string>
+    <string name="edit_waybill">Изменить накладную</string>
+    <string name="enter_waybill_number">Введите номер накладной</string>
+    <string name="delete">Удалить</string>
+    <string name="confirm_delete">Вы увереннны?</string>
+    <string name="confirm_delete_msg">Вы уверенны что хотите удалить?</string>
+    <string name="cancel">Отменить</string>
+    <string name="yes">Да</string>
+    <string name="successfully_deleted">Успешно удалено</string>
+    <string name="add_waybill">Добавить накладную</string>
+</resources>

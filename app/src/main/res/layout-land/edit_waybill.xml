@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/edit_waybill_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:paddingLeft="0dp">
+        <TextView
+                android:text="№"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="100dp" android:layout_marginLeft="5dp"/>
+        <EditText
+                android:id="@+id/tNumber"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:singleLine="true"
+                android:maxLength="10"/>
+        <Button
+                android:background="@drawable/ic_exposure_plus_1_black_24dp"
+                android:onClick="setLastNumberPlusOne"
+
+                android:layout_width="24dp"
+                android:layout_height="24dp" android:id="@+id/button3"/>
+    </TableRow>
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:paddingLeft="0dp">
+        <TextView
+                android:text="@string/waybill_table_date"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="100dp" android:layout_marginLeft="5dp"/>
+        <EditText
+                android:id="@+id/tDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date"
+                android:maxLength="10"
+                android:singleLine="true"/>
+        <Button
+                android:background="@drawable/ic_date_range_black_24dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:onClick="setCurrentDate"
+                android:id="@+id/btnCurrent"/>
+    </TableRow>
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="44dp"
+            android:paddingLeft="0dp">
+        <TextView
+                android:text="@string/waybill_table_comment"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="100dp" android:layout_marginLeft="5dp"/>
+        <EditText
+                android:id="@+id/tComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:maxLength="50"
+                android:inputType="text" android:singleLine="true"/>
+    </TableRow>
+    <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="44dp"
+            android:paddingLeft="0dp">
+        <TextView
+                android:text="@string/waybill_table_sum"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="100dp" android:layout_marginLeft="5dp"/>
+        <EditText
+                android:id="@+id/tSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:maxLength="10"
+                android:singleLine="true" android:inputType="numberDecimal"/>
+    </TableRow>
+    <Button
+            android:text="@string/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="update"
+            android:id="@+id/btnUpdate"/>
+
+</LinearLayout>

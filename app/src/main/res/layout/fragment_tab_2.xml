@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="horizontal|vertical"
+                android:scrollbarStyle="outsideInset"
+                android:fillViewport="true" android:layout_alignParentTop="true">
+
+                <HorizontalScrollView
+                        android:id="@+id/horizontalView"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="horizontal|vertical"
+                        android:layout_width="match_parent"
+                        android:fillViewport="true"
+                        android:layout_marginTop="5dip">
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                             android:id="@+id/mainTable"
+                             android:orientation="vertical"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+
+                <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                                android:text="№"
+                                android:padding="3dip"
+                                android:layout_weight="0"
+                                />
+                        <TextView
+                                android:text="@string/waybill_table_date"
+                                android:padding="3dip"
+                                android:layout_weight="1"
+                                android:gravity="right" />
+                        <TextView
+                                android:text="@string/waybill_table_comment"
+                                android:padding="3dip"
+                                android:layout_weight="1"
+                                android:gravity="right"/>
+                        <TextView
+                                android:text="@string/waybill_table_sum"
+                                android:padding="3dip"
+                                android:layout_weight="1"
+                                android:gravity="right"/>
+                </TableRow>
+        </TableLayout>
+                </HorizontalScrollView>
+</ScrollView>
+</RelativeLayout>

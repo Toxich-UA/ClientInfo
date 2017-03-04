@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+
+             android:stretchColumns="1" android:padding="20dp">
+    <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/vLastName"
+            android:text="@string/customer_info_last_name"
+            android:padding="3dip" />
+        <TextView
+                android:text=""
+                android:padding="3dip" android:gravity="right"
+                android:id="@+id/tLastName"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+                android:id="@+id/vFirstName"
+                android:text="@string/customer_info_first_name"
+                android:padding="3dip" />
+        <TextView
+                android:text=""
+                android:gravity="right"
+                android:padding="3dip"
+                android:id="@+id/tFirstName"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+                android:id="@+id/vMiddleName"
+                android:text="@string/customer_info_middle_name"
+                android:padding="3dip" />
+        <TextView
+                android:text=""
+                android:gravity="right"
+                android:padding="3dip"
+                android:id="@+id/tMiddleName"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+                android:id="@+id/vPhoneNumber"
+                android:text="@string/customer_info_phone_number"
+                android:padding="3dip" />
+        <TextView
+                android:text=""
+                android:gravity="right"
+                android:padding="3dip"
+                android:id="@+id/tPhoneNumber"/>
+    </TableRow>
+</TableLayout>
