@@ -36,9 +36,9 @@ public class EditWaybill extends AppCompatActivity {
 
     private int lastNumber = 0;
 
-    public DBHelper sqlHelper;
+    private DBHelper sqlHelper;
 
-    public EditText Number;
+    private EditText Number;
     private EditText Date;
     private EditText Comment;
     private EditText Sum;
@@ -69,7 +69,10 @@ public class EditWaybill extends AppCompatActivity {
         currentPhone = intent.getExtras().getString("currentPhone");
         currentNumber = intent.getExtras().getString("currentNumber");
         lastNumber = Integer.parseInt(intent.getExtras().getString("lastNumber"));
-        numberList = intent.getStringArrayListExtra("number_list");
+
+
+        numberList = getAllNumber();
+
         isEdit = intent.getBooleanExtra("isEdit", false);
 
 
@@ -187,5 +190,20 @@ public class EditWaybill extends AppCompatActivity {
     public void setLastNumberPlusOne(View view){
         Number.setText(lastNumber + 1 + "");
         lastNumber += 1;
+    }
+
+    private ArrayList<String> getAllNumber(){
+        String[] columnArgs = new String[]{DBHelper.COLUMN_NUMBER};
+        String[] selectionArgs = new String[]{Client_ID};
+        Cursor cursor = sqlHelper.database.query(DBHelper.TABLE_WAYBILL, columnArgs, DBHelper.COLUMN_CLIENT_ID+" =?", selectionArgs, null, null, null);
+
+        ArrayList<String> number = new ArrayList<>();
+        if (cursor.moveToFirst()) {
+
+            do {
+                number.add(Integer.toString(cursor.getInt(cursor.getColumnIndex(DBHelper.COLUMN_NUMBER))));
+            } while (cursor.moveToNext());
+        }
+        return number;
     }
 }

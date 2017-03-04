@@ -93,8 +93,7 @@ public class CustomerInfo extends AppCompatActivity {
 
                 intent.putExtra("lastNumber", lastNumber);
                 intent.putExtra("isEdit", false);
-                if (tab_2_bundle != null)
-                    intent.putStringArrayListExtra("number_list", tab_2_bundle.getStringArrayList("number_list"));
+
                 startActivity(intent);
                 finish();
                 return true;
