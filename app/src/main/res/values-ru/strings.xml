@@ -36,4 +36,5 @@
     <string name="yes">Да</string>
     <string name="successfully_deleted">Успешно удалено</string>
     <string name="add_waybill">Добавить накладную</string>
+    <string name="edit_last_name">Введите фамилию</string>
 </resources>

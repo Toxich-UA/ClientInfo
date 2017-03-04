@@ -68,12 +68,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public Intent getUserInfo(Intent intent, String p){
-        String[] selectionArgs = new String[]{p};
+    public Intent getUserInfo(Intent intent, String where, String selection){
+        String[] selectionArgs = new String[]{selection};
 
 
-        if (!(p.equals(""))) {
-            Cursor cursor = sqlHelper.getData(DBHelper.TABLE_CLIENT ,DBHelper.CLIENT_COLUMN, "Phone = ?", selectionArgs);
+        if (!(selection.equals(""))) {
+            Cursor cursor = sqlHelper.getData(DBHelper.TABLE_CLIENT ,DBHelper.CLIENT_COLUMN, where+" = ?", selectionArgs);
 
             if (cursor.moveToFirst()) {
 
@@ -134,46 +134,56 @@ public class MainActivity extends AppCompatActivity {
         return intent;
     }
 
-    public void findCustomerInfo(View view){
+    public void btnFindCustomerInfo(View view){
         Intent intent = new Intent(MainActivity.this, FindCustomer.class);
         startActivity(intent);
     }
 
-    public void editCustomerInfo(View view){
+    public void btnEditCustomerInfo(View view){
         Intent intent = new Intent(MainActivity.this, EditCustomer.class);
         startActivity(intent);
     }
-    public void getAllCustomer(View view){
+    public void btnGetAllCustomer(View view){
+        startActivity(getAllCustomer(null));
+    }
 
-        Cursor cursor = sqlHelper.database.query(DBHelper.TABLE_CLIENT, DBHelper.CLIENT_COLUMN, null, null, null, null, null);
+    public Intent getAllCustomer(String where){
+        Cursor cursor;
+        if (where == null)
+            cursor = sqlHelper.database.query(DBHelper.TABLE_CLIENT, DBHelper.CLIENT_COLUMN, null, null, null, null, null);
+        else {
+            String[] selectionArgs = new String[]{where};
+            cursor = sqlHelper.database.query(DBHelper.TABLE_CLIENT, DBHelper.CLIENT_COLUMN, DBHelper.COLUMN_LAST_NAME + " =?", selectionArgs, null, null, null);
+        }
         Intent intent = new Intent(MainActivity.this, CustomerList.class);
 
 
-            if (cursor.moveToFirst()) {
-                ArrayList<String> id = new ArrayList<>();
-                ArrayList<String> firstName = new ArrayList<>();
-                ArrayList<String> lastName = new ArrayList<>();
-                ArrayList<String> middleName = new ArrayList<>();
-                ArrayList<String> phoneNumber = new ArrayList<>();
+        if (cursor.moveToFirst()) {
+            ArrayList<String> id = new ArrayList<>();
+            ArrayList<String> firstName = new ArrayList<>();
+            ArrayList<String> lastName = new ArrayList<>();
+            ArrayList<String> middleName = new ArrayList<>();
+            ArrayList<String> phoneNumber = new ArrayList<>();
 
-                do {
-                    id.add(Integer.toString(cursor.getInt(cursor.getColumnIndex(DBHelper.COLUMN_ID))));
-                    firstName.add(cursor.getString(cursor.getColumnIndex(DBHelper.COLUMN_FIRST_NAME)));
-                    lastName.add(cursor.getString(cursor.getColumnIndex(DBHelper.COLUMN_LAST_NAME)));
-                    middleName.add(cursor.getString(cursor.getColumnIndex(DBHelper.COLUMN_MIDDLE_NAME)));
-                    phoneNumber.add(cursor.getString(cursor.getColumnIndex(DBHelper.COLUMN_Phone)));
-                } while (cursor.moveToNext());
+            do {
+                id.add(Integer.toString(cursor.getInt(cursor.getColumnIndex(DBHelper.COLUMN_ID))));
+                firstName.add(cursor.getString(cursor.getColumnIndex(DBHelper.COLUMN_FIRST_NAME)));
+                lastName.add(cursor.getString(cursor.getColumnIndex(DBHelper.COLUMN_LAST_NAME)));
+                middleName.add(cursor.getString(cursor.getColumnIndex(DBHelper.COLUMN_MIDDLE_NAME)));
+                phoneNumber.add(cursor.getString(cursor.getColumnIndex(DBHelper.COLUMN_Phone)));
+            } while (cursor.moveToNext());
 
 
-                intent.putExtra("id", id);
-                intent.putExtra("firstName", firstName);
-                intent.putExtra("lastName", lastName);
-                intent.putExtra("middleName", middleName);
-                intent.putExtra("phoneNumber", phoneNumber);
-            }
+            intent.putExtra("id", id);
+            intent.putExtra("firstName", firstName);
+            intent.putExtra("lastName", lastName);
+            intent.putExtra("middleName", middleName);
+            intent.putExtra("phoneNumber", phoneNumber);
+        }
 
-            startActivity(intent);
+        return intent;
     }
+
 
     @Override
     public void onDestroy(){

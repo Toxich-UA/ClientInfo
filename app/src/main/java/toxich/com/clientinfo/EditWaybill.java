@@ -170,7 +170,7 @@ public class EditWaybill extends AppCompatActivity {
                 Toast.makeText(this, R.string.successfully_added, Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(EditWaybill.this, CustomerInfo.class);
-                startActivity(MainActivity.mainActivity.getUserInfo(intent, currentPhone));
+                startActivity(MainActivity.mainActivity.getUserInfo(intent, DBHelper.COLUMN_Phone, currentPhone));
                 finish();
             }
         }else

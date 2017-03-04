@@ -1,5 +1,6 @@
 package toxich.com.clientinfo;
 
+import DB.DBHelper;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -128,7 +129,7 @@ public class CustomerList extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CustomerList.this, CustomerInfo.class);
-                startActivity( MainActivity.mainActivity.getUserInfo(intent, phoneNumber.getText().toString()) );
+                startActivity( MainActivity.mainActivity.getUserInfo(intent, DBHelper.COLUMN_Phone, phoneNumber.getText().toString()) );
 
             }
         });

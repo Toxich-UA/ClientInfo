@@ -20,18 +20,18 @@
             android:text="@string/btn_find_customer_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="findCustomerInfo"
+            android:onClick="btnFindCustomerInfo"
             android:id="@+id/btnFind"/>
     <Button
             android:text="@string/btn_get_all_customer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="getAllCustomer"
+            android:onClick="btnGetAllCustomer"
             android:id="@+id/btnGetAllCustomer"/>
     <Button
             android:text="@string/add_customer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="editCustomerInfo"
+            android:onClick="btnEditCustomerInfo"
             android:id="@+id/btnEdit"/>
 </LinearLayout>

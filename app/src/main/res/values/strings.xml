@@ -2,6 +2,7 @@
     <string name="app_name">ClientInfo</string>
     <string name="btn_get_customer_info">Get customer info</string>
     <string name="edit_phone_Number">Enter phone number</string>
+    <string name="edit_last_name">Enter last name</string>
 
     <string name="btn_get_all_customer">Get all customer</string>
     <string name="btn_find_customer_info">Find customer info</string>

@@ -24,12 +24,12 @@
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/editPhoneNumber" android:layout_gravity="center_horizontal" android:phoneNumber="true"/>
+            android:id="@+id/editGetUserInfoByPhone" android:layout_gravity="center_horizontal" android:phoneNumber="true"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_get_customer_info"
-            android:id="@+id/btnGetUserInfo"
+            android:id="@+id/btnGetUserInfoByPhone"
             android:layout_gravity="right"
-            android:onClick="getCustomerInfo" android:paddingRight="20dp" android:paddingLeft="20dp"/>
+            android:onClick="getCustomerInfoByNumber" android:paddingRight="20dp" android:paddingLeft="20dp"/>
 </LinearLayout>

@@ -128,7 +128,7 @@ public class EditCustomer extends AppCompatActivity {
                 Toast.makeText(this, R.string.customer_info_edit, Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(EditCustomer.this, CustomerInfo.class);
-                startActivity(MainActivity.mainActivity.getUserInfo(intent, sPhone));
+                startActivity(MainActivity.mainActivity.getUserInfo(intent, DBHelper.COLUMN_Phone, sPhone));
                 finish();
             }else{
                 MainActivity.mainActivity.sqlHelper.database.insert(DBHelper.TABLE_CLIENT, null, values);
@@ -136,7 +136,7 @@ public class EditCustomer extends AppCompatActivity {
                 Toast.makeText(this, R.string.successfully_added, Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(EditCustomer.this, CustomerInfo.class);
-                startActivity(MainActivity.mainActivity.getUserInfo(intent, sPhone));
+                startActivity(MainActivity.mainActivity.getUserInfo(intent, DBHelper.COLUMN_Phone, sPhone));
                 finish();
             }
         }else

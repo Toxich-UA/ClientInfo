@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical" android:weightSum="1">
@@ -13,7 +12,7 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
     <Space
             android:layout_width="match_parent"
-            android:layout_height="210dp"/>
+            android:layout_height="106dp"/>
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,13 +26,33 @@
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/editPhoneNumber" android:layout_gravity="center_horizontal"
+            android:id="@+id/editGetUserInfoByPhone" android:layout_gravity="center_horizontal"
     />
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="getCustomerInfo"
+            android:onClick="getCustomerInfoByNumber"
             android:text="@string/btn_get_customer_info"
-            android:id="@+id/btnGetUserInfo" android:layout_gravity="right" android:paddingRight="20dp"
+            android:id="@+id/btnGetUserInfoByPhone" android:layout_gravity="right" android:paddingRight="20dp"
+            android:paddingLeft="20dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/edit_last_name"
+            android:id="@+id/textView2"
+            android:gravity="center"/>
+    <EditText
+            android:layout_width="294dp"
+            android:maxLength="10"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/editGetUserInfoByLastName" android:layout_gravity="center_horizontal"
+            android:inputType="text"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getCustomerInfoByLastName"
+            android:text="@string/btn_get_customer_info"
+            android:id="@+id/btnGetUserInfoByLastName" android:layout_gravity="right" android:paddingRight="20dp"
             android:paddingLeft="20dp"/>
 </LinearLayout>
